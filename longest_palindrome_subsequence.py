@@ -16,7 +16,7 @@
 # 	    b[i, j] = " southwest arrow "                   		#
 #       else                                                            #
 #           p[i, j] == 1                                                #
-# 			b[i, j] = " down arrow "                        #
+# 	    b[i, j] = " down arrow "                        		#
 # 	p[n, n] = 1                                                     #
 # 	for i = n-2 downto 1                                            #
 #   	for j = i + 2 to n                                              #
