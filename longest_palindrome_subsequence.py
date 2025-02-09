@@ -12,8 +12,8 @@
 #   	p[i, i] = 1                                                     #
 #   	j = i + 1                                                       #
 #       if xi == xj                                                     #
-#   		p[i, j] == 2                                            #
-# 			b[i, j] = " southwest arrow "                   #
+#   	    p[i, j] == 2                                            	#
+# 	    b[i, j] = " southwest arrow "                   		#
 #       else                                                            #
 #           p[i, j] == 1                                                #
 # 			b[i, j] = " down arrow "                        #
