@@ -21,13 +21,13 @@
 # 	for i = n-2 downto 1                                            #
 #   	for j = i + 2 to n                                              #
 #       	if xi == xj                                             #
-#           	p[i, j] = p[i+1, j-1] + 2                               #
-# 				b[i, j] = " northwest arrow "           #
-# 			elseif p[i+1, j] >= p[i, j-1]                   #
-# 				p[i, j] = [i+1, j]                      #
-# 				b[i, j] = " down arrow "                #
-# 			else p[i, j] = p[i, j-1]                        #
-# 				 b[i, j] = " left arrow "               #
+#           		p[i, j] = p[i+1, j-1] + 2                       #
+# 			b[i, j] = " northwest arrow "           	#
+# 		elseif p[i+1, j] >= p[i, j-1]                   	#
+# 			p[i, j] = [i+1, j]                      	#
+# 			b[i, j] = " down arrow "                	#
+# 		else p[i, j] = p[i, j-1]                        	#
+# 			b[i, j] = " left arrow "               		#
 # 	return p and b                                                  #
 #                                                                       #
 # GENERATE-LPS(b, X, i, j, S)                                           #
