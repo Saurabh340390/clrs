@@ -6,39 +6,39 @@
 
 #########################################################################
 # LONGEST-PALINDROME-SUBSEQUENCE(X)                                     #
-# 	n = X.length                                                        #
+# 	n = X.length                                                    #
 #   Let p[0..n, 0..n] and b[1..n, 1..n]                                 #
 #   for i = 1 to n-1                                                    #
 #   	p[i, i] = 1                                                     #
 #   	j = i + 1                                                       #
 #       if xi == xj                                                     #
-#   		p[i, j] == 2                                                #
-# 			b[i, j] = " southwest arrow "                               #
+#   		p[i, j] == 2                                            #
+# 			b[i, j] = " southwest arrow "                   #
 #       else                                                            #
 #           p[i, j] == 1                                                #
-# 			b[i, j] = " down arrow "                                    #
-# 	p[n, n] = 1                                                         #
-# 	for i = n-2 downto 1                                                #
+# 			b[i, j] = " down arrow "                        #
+# 	p[n, n] = 1                                                     #
+# 	for i = n-2 downto 1                                            #
 #   	for j = i + 2 to n                                              #
-#       	if xi == xj                                                 #
+#       	if xi == xj                                             #
 #           	p[i, j] = p[i+1, j-1] + 2                               #
-# 				b[i, j] = " northwest arrow "                           #
-# 			elseif p[i+1, j] >= p[i, j-1]                               #
-# 				p[i, j] = [i+1, j]                                      #
-# 				b[i, j] = " down arrow "                                #
-# 			else p[i, j] = p[i, j-1]                                    #
-# 				 b[i, j] = " left arrow "                               #
-# 	return p and b                                                      #
+# 				b[i, j] = " northwest arrow "           #
+# 			elseif p[i+1, j] >= p[i, j-1]                   #
+# 				p[i, j] = [i+1, j]                      #
+# 				b[i, j] = " down arrow "                #
+# 			else p[i, j] = p[i, j-1]                        #
+# 				 b[i, j] = " left arrow "               #
+# 	return p and b                                                  #
 #                                                                       #
 # GENERATE-LPS(b, X, i, j, S)                                           #
 #  if i > j                                                             #
-#  	return S                                                            #
+#  	return S                                                        #
 #  elseif i==j                                                          #
-#  	return S||xi                                                        #
+#  	return S||xi                                                    #
 #  elseif b[i, j] == " southwest arrow "                                #
-#  	return GENERATE-LPS(b, X, i+1, j-1, S) || xi                        #
+#  	return GENERATE-LPS(b, X, i+1, j-1, S) || xi                    #
 #  elseif b[i, j] == " down arrow "                                     #
-#  	return GENERATE-LPS(b, X, i+1, j, S)                                #
+#  	return GENERATE-LPS(b, X, i+1, j, S)                            #
 #  else  return GENERATE-LPS(b, X, i, j-1, S)                           #
 #                                                                       #
 #########################################################################
